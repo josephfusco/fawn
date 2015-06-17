@@ -1,0 +1,32 @@
+/*!
+Theme Name: Fawn
+Theme URI: http://github.com/whitetail/fawn/
+Author: Whitetail Development, Inc.
+Author URI: http://whitetail.io/
+Description: WordPress Starter Theme for use as a starting template for building custom themes.
+Version: 0.1.0
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: _fawn
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+_fawn is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+*/
+
+// Core variables and mixins
+@import "partials/variables";
+@import "partials/mixins";
+
+// Reset and dependencies
+@import "partials/normalize";
+@import "partials/print";
+
+// Core styles
+@import "partials/base";
+@import "partials/type";
+@import "partials/grid";
+@import "partials/main";
