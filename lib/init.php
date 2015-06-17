@@ -52,7 +52,7 @@ function _fawn_setup() {
 	// add_filter('widget_text', 'do_shortcode');
 
 	// Add Editor Style
-	add_editor_style();
+	// add_editor_style();
 
 	// Prevent File Modifications
 	if ( ! defined( 'DISALLOW_FILE_EDIT' ) ) {

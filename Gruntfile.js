@@ -6,6 +6,9 @@ module.exports = function(grunt) {
     grunt.initConfig({
 
         watch: {
+            options: {
+                livereload: true,
+            },
             sass: {
                 files: ['assets/styles/**/*.{scss,sass}'],
                 tasks: ['sass', 'autoprefixer', 'cssmin']
