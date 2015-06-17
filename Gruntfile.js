@@ -1,12 +1,10 @@
 'use strict';
 module.exports = function(grunt) {
 
-    // load all grunt tasks matching the `grunt-*` pattern
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
 
-        // watch for changes and trigger sass, jshint, uglify and livereload
         watch: {
             sass: {
                 files: ['assets/styles/**/*.{scss,sass}'],
@@ -22,7 +20,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // sass
         sass: {
             dist: {
                 options: {
@@ -35,7 +32,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // autoprefixer
         autoprefixer: {
             options: {
                 browsers: ['last 2 versions', 'ie 9', 'ios 6', 'android 4'],
@@ -49,7 +45,6 @@ module.exports = function(grunt) {
             },
         },
 
-        // css minify
         cssmin: {
             options: {
                 keepSpecialComments: 1
@@ -62,7 +57,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // javascript linting with jshint
         jshint: {
             options: {
                 jshintrc: '.jshintrc',
@@ -74,7 +68,6 @@ module.exports = function(grunt) {
             ]
         },
 
-        // uglify to concat, minify, and make source maps
         uglify: {
             plugins: {
                 options: {
@@ -105,7 +98,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // image optimization
         imagemin: {
             dist: {
                 options: {
@@ -124,7 +116,6 @@ module.exports = function(grunt) {
 
     });
 
-    // register task
     grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'uglify', 'imagemin', 'watch']);
 
 };
