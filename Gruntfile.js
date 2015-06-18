@@ -30,7 +30,8 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'assets/styles/build/style.css': 'assets/styles/style.scss',
-                    'assets/styles/build/editor-style.css': 'assets/styles/editor-style.scss'
+                    'assets/styles/build/editor-style.css': 'assets/styles/editor-style.scss',
+                    'assets/styles/build/lte-ie9.css': 'assets/styles/lte-ie9.scss'
                 }
             }
         },

@@ -19,6 +19,8 @@ The theme is setup to use [Grunt](http://gruntjs.com/) to compile SCSS (with sou
 Run `npm install` to pull in all Grunt dependencies. Run `grunt` to execute tasks.
 
 - Compile `assets/styles/style.scss` to `style.css`
+- Compile `assets/styles/editor-style.scss` to `editor-style.css`
+- Compile `assets/styles/lte-ie9.scss` to `lte-ie9.css`
 - Concatenate and minify plugins in `assets/js/vendor` and `assets/js/source/plugins.js` to `assets/js/plugins.min.js`
 - Minify and lint `assets/js/source/main.js` to `assets/js/main.min.js`
 

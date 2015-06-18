@@ -34,7 +34,7 @@ img {
 	vertical-align: middle;
 }
 
-.sr-only {
+.screen-reader-text {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -43,18 +43,6 @@ img {
 	overflow: hidden;
 	clip: rect(0,0,0,0);
 	border: 0;
-}
-
-.sr-only-focusable {
-	&:active,
-	&:focus {
-		position: static;
-		width: auto;
-		height: auto;
-		margin: 0;
-		overflow: visible;
-		clip: auto;
-	}
 }
 
 [role="button"] {
