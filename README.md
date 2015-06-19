@@ -1,16 +1,10 @@
-# fawn
+#fawn
 
 A WordPress Starter Theme
 
 ### Summary
 
 For use as a starting template for building custom themes. Uses SCSS and AutoPrefixr, HTML5 Boilerplate with Modernizr and Normalize.css, and Grunt for all processing tasks.
-
-----
-
-![fawn](screenshot.png?raw=true)
-
-----
 
 ### Usage
 
