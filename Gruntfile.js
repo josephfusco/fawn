@@ -120,6 +120,11 @@ module.exports = function(grunt) {
 
     });
 
-    grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'uglify', 'imagemin', 'watch']);
+    grunt.registerTask('default', 
+        ['sass', 'autoprefixer', 'cssmin', 'uglify', 'watch']
+    );
+    grunt.registerTask('dist',
+        ['sass', 'autoprefixer', 'cssmin', 'uglify', 'imagemin', 'watch']
+    );
 
 };
