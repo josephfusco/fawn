@@ -3,13 +3,13 @@
 // ==========================================================================================
 
 @function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return $remSize * 1rem;
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
 }
 
 @mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
+	font-size: $size;
+	font-size: calculateRem($size);
 }
 
 // @include fontface('family', 'assets/fonts/', 'myfontname');
@@ -35,8 +35,14 @@
 }
 
 @mixin doubly($margin) {
-  & + & {
-    margin-left: $margin;
-    @content;
-  }
+	& + & {
+		margin-left: $margin;
+		@content;
+  	}
+}
+
+@mixin gpu() {
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000;
 }
