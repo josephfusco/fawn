@@ -15,6 +15,17 @@ body {
  	box-sizing: inherit;
 }
 
+// a11y - only display outlines for tabbing
+*:active, *:focus {
+	outline: 0;
+}
+
+*:active.keyboard-outline, *:focus.keyboard-outline {
+	outline: thin dotted;
+  	outline: 5px auto -webkit-focus-ring-color;
+  	outline-offset: -1px;
+}
+
 input,
 button,
 select,
@@ -43,6 +54,25 @@ img {
 	overflow: hidden;
 	clip: rect(0,0,0,0);
 	border: 0;
+	
+	&:hover, &:focus, &:active {
+		background-color: #FFF;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+		clip: auto !important;
+		color: #333;
+		display: block;
+		font-family: Arial, sans-serif;
+		font-size: 14px;
+		font-weight: bold;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000;
+	}
 }
 
 [role="button"] {
