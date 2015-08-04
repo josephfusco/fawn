@@ -51,16 +51,6 @@ require get_template_directory() . '/lib/inc/jetpack.php';
 
 
 /****************************************
-Require Plugins
-*****************************************/
-
-require get_template_directory() . '/lib/class-tgm-plugin-activation.php';
-require get_template_directory() . '/lib/theme-require-plugins.php';
-
-// add_action( 'tgmpa_register', 'fawn_register_required_plugins' );
-
-
-/****************************************
 Misc Theme Functions
 *****************************************/
 
