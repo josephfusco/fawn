@@ -5,6 +5,7 @@
  * @package _fawn
  */
 
+define( '_VERSION', '1.0.0' );
 
 /**
  * Register Widget Areas
@@ -82,7 +83,7 @@ function fawn_imagelink_setup() {
  * Enqueue scripts
  */
 function fawn_scripts() {
-	wp_enqueue_style( '_fawn-style', get_stylesheet_uri() );
+	wp_enqueue_style( '_fawn-style', get_stylesheet_uri(), array(), _VERSION );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -90,8 +91,8 @@ function fawn_scripts() {
 
 	if ( !is_admin() ) {
 		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'customplugins', get_template_directory_uri() . '/assets/js/plugins.min.js', array('jquery'), NULL, true );
-		wp_enqueue_script( 'customscripts', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), NULL, true );
+		wp_enqueue_script( 'customplugins', get_template_directory_uri() . '/assets/js/plugins.min.js', array('jquery'), _VERSION, true );
+		wp_enqueue_script( 'customscripts', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), _VERSION, true );
 	}
 }
 
