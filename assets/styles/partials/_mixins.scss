@@ -12,6 +12,15 @@
 	font-size: calculateRem($size);
 }
 
+@mixin opacity($opacity) {
+	$opacity-ie: $opacity * 100;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity-ie})";
+	filter: alpha(opacity=$opacity-ie);
+	-moz-opacity: $opacity;
+	-khtml-opacity: $opacity;
+  	opacity: $opacity;
+}
+
 // @include fontface('family', 'assets/fonts/', 'myfontname');
 @mixin fontface($font-family, $font-url, $font-name) {
 	@font-face {
