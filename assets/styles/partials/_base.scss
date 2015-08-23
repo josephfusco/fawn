@@ -35,12 +35,6 @@ textarea {
 	line-height: inherit;
 }
 
-a {
-	&:focus {
-		@include tab-focus;
-	}
-}
-
 img {
 	vertical-align: middle;
 }
