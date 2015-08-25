@@ -13,13 +13,13 @@ module.exports = function(grunt) {
                 files: ['assets/styles/**/*.{scss,sass}'],
                 tasks: ['sass', 'autoprefixer', 'cssmin']
             },
+            svgstore: {
+                files: ['assets/images/svg/**/*.svg'],
+                tasks: ['svgstore','svg2png']
+            },
             js: {
                 files: '<%= jshint.all %>',
                 tasks: ['jshint', 'uglify']
-            },
-            images: {
-                files: ['assets/images/**/*.{png,jpg,gif,svg}'],
-                tasks: ['imagemin']
             }
         },
 
@@ -116,12 +116,38 @@ module.exports = function(grunt) {
                     dest: 'assets/images/'
                 }]
             }
+        },
+
+        svgstore: {
+            options: {
+                prefix : 'def-',
+                svg: {
+                    style : 'display: none'
+                }
+            },
+            default : {
+                files: {
+                    'assets/images/defs.svg': ['assets/images/svg/**/*.svg'],
+                },
+            },
+        },
+
+        svg2png: {
+            all: {
+                files: [
+                    { cwd: 'assets/images/svg/', src: ['**/*.svg'], dest: 'assets/images/svg/fallback/' }
+                ]
+            }
         }
 
     });
 
-    grunt.registerTask('default', 
+    grunt.registerTask('default',
         ['sass', 'autoprefixer', 'cssmin', 'uglify', 'watch']
+    );
+
+    grunt.registerTask('svg',
+        ['svgstore', 'svg2png']
     );
 
 };
