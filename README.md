@@ -20,16 +20,13 @@ Run `npm install` to pull in all Grunt dependencies. Run `grunt` to execute task
 
 To concatenate and minify your jQuery plugins, add them to the `assets/js/vendor` directory and add the `js` filename and path to the `Gruntfile` `uglify` task. Previous versions of the starter theme automatically pulled all plugins in the `vendor` directory, but this has changed to allow more granular control and for managing plugins and assets with bower.
 
-### Bower
-
-Supports [bower](https://github.com/bower/bower) to install and manage JavaScript dependencies in the `assets/js/vendor` folder.
-
 ### Features
 
 1. Normalized stylesheet for cross-browser compatibility using Normalize.css version 3 (IE8+)
-3. [Condensed Bootstrap Grid](https://github.com/whitetail/condensed-bootstrap-grid) - Full bootstrap grid experience packed into a 2kb Sass partial
-5. SCSS partially setup with reset dependencies and base styles
-6. Grunt for processing all SASS, JavaScript and images
+2. [Condensed Bootstrap Grid](https://github.com/whitetail/condensed-bootstrap-grid) - Full bootstrap grid experience packed into a 2kb Sass partial
+3. SCSS partially setup with reset dependencies and base styles
+4. Grunt for processing all SASS, JavaScript and images
+5. SVG Defs system with png fallback
 
 ### Credits
 
